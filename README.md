@@ -1,8 +1,8 @@
 # RSA
 It's a type of symmetric cryptography in which 2 keys are used to encrypt and decrypt the message. <br />
 Suppose, <br />
-> A sends a message "HI" to B
-The message will encrypted by the public key of the B and it'll be decrypted only by the private key of B which is only known to B. 
+> A sends a message "HI" to B,
+The message will be encrypted by the public key of the B and it'll be decrypted only by the private key of B which is only known to B. 
 
 # OVERVIEW OF RSA
 
