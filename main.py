@@ -32,7 +32,7 @@ for i in range(2,25):
     primes.append(i)
 
 
-print(primes)
+# print(primes)
 while(1):
   p = random.choice(primes)
   q = random.choice(primes)
@@ -41,7 +41,7 @@ while(1):
   if(p*q > length):
     break
 
-print(p*q)
+# print(p*q)
 
 #RSA's MODULO
 n = p*q
@@ -78,9 +78,9 @@ print(f"Private key : {(d,n)}")
 
 # ENCRYPTION
 cipher = (length**e) % n
-print(f"Encrypted : {cipher}")
+print(f"Encrypted Message : {cipher}")
 
 
 # DECRYPTION
 plain = (cipher**d) % n
-print(f"Decryped : {plain}")
+print(f"Decryped Message : {plain}")
