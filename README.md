@@ -1,5 +1,10 @@
 # RSA
-RSA ALGORITHM IN CRYPTOGRAPHY
+It's a type of symmetric cryptography in which 2 keys are used to encrypt and decrypt the message. <br />
+Suppose, <br />
+> A sends a message "HI" to B
+The message will encrypted by the public key of the B and it'll be decrypted only by the private key of B which is only known to B. 
+
+# OVERVIEW OF RSA
 
 * Get a plain text in order to encrypt it.
 * Select any 2 prime numbers of your choice, more larger the prime number, more secure your encrypted data is. In my case i stored the prime numbers in p and q.
@@ -22,6 +27,10 @@ RSA ALGORITHM IN CRYPTOGRAPHY
 
 # Conversion of CIPHER TEXT to PLAIN TEXT
 > plain = (cipher**d) % n <br />
+
+# TRY RUNNING YOURSELF
+https://repl.it/@arasharora/RSA#main.py
+
 
 # OUTPUT:
 <hr>
