@@ -1,6 +1,8 @@
 # RSA
 RSA ALGORITHM IN CRYPTOGRAPHY
 
+# OVERVIEW OF RSA
+<hr>
 * Get a plain text in order to encrypt it.
 * Select any 2 prime numbers of your choice, more larger the prime number, more secure your encrypted data is. In my case i stored the prime numbers in p and q.
 * n in the code which stands for the modulus in the RSA is equal to the product of those two prime numbers. n = p*q.
@@ -22,6 +24,10 @@ RSA ALGORITHM IN CRYPTOGRAPHY
 
 # Conversion of CIPHER TEXT to PLAIN TEXT
 > plain = (cipher**d) % n <br />
+
+# TRY RUNNING YOURSELF
+https://repl.it/@arasharora/RSA#main.py
+
 
 # OUTPUT:
 <hr>
