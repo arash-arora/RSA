@@ -11,9 +11,8 @@ for i in message:
 
 # print(alpha)
 str_alpha = "".join(alpha)
-int_alpha = int(str_alpha)
-length = int_alpha
-print(f"Length of message is {length}")
+length = int(str_alpha)
+print(f"Message is {length}")
 
 #KEY GENERATION
 
@@ -30,22 +29,23 @@ for i in range(2,20):
     primes.append(i)
 
 
-print(primes)
+# print(primes)
 p = random.choice(primes)
 q = random.choice(primes)
 while(p>=q):
   q = random.choice(primes)
 
-print(p,q)
-# p = 13
-# q = 19
-
+#RSA's MODULO
 n = p*q
-print(n)
+if n < length:
+  print("Try Again! The Key was small to encrypt such plain text.")
+  exit()
+
+#EULER's CONSTANT
 phi = (p-1)*(q-1)
 e = 2
-print(f"phi : {phi}")
 
+#e - public exponent
 while(e < phi):
   for i in range(1, e+1):
     if e%i==0 and phi%i==0:
@@ -55,22 +55,21 @@ while(e < phi):
   else:
     e+=1
 
-print(f"e = {e}")
-
+#d - private exponent
 d = 2
 while(1):
   if (e*d)%phi == 1 :
     break
   else:
     d+=1
-print(f"d = {d}")
+
 
 print(f"Public key : {(e,n)}")   
 print(f"Private key : {(d,n)}")
 
 
 # ENCRYPTION
-cipher = (int_alpha**e) % n
+cipher = (length**e) % n
 print(f"Encrypted : {cipher}")
 
 
