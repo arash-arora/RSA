@@ -12,6 +12,9 @@ for i in message:
 # print(alpha)
 str_alpha = "".join(alpha)
 length = int(str_alpha)
+
+if len(str_alpha) > 2 : 
+  print("Try again! The message is larger for the key to encrypt.")
 print(f"Message is {length}")
 
 #KEY GENERATION
@@ -20,7 +23,7 @@ print(f"Message is {length}")
 
 primes = []
 
-for i in range(2,20):
+for i in range(2,25):
   flag = 0
   for j in range(1,i+1):
     if i%j == 0:
@@ -29,11 +32,16 @@ for i in range(2,20):
     primes.append(i)
 
 
-# print(primes)
-p = random.choice(primes)
-q = random.choice(primes)
-while(p>=q):
+print(primes)
+while(1):
+  p = random.choice(primes)
   q = random.choice(primes)
+  while(p>=q):
+    q = random.choice(primes)
+  if(p*q > length):
+    break
+
+print(p*q)
 
 #RSA's MODULO
 n = p*q
